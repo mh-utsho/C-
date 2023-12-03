@@ -2,19 +2,19 @@
 using namespace std;
 class Solution {
 public:
-     int findDuplicate(vector<int>& nums) {
+     int findDuplicate(vector<int>& v) {
         
-        for(int i=0;i<nums.size();++i)
+        for(int i=0;i<v.size();++i)
         {
-            if(nums[abs(nums[i])-1]>=0)
-              nums[abs(nums[i])-1] = -nums[abs(nums[i])-1];
+            if(v[abs(v[i])-1]>=0)
+              v[abs(v[i])-1] = -v[abs(v[i])-1];
             else
-                return abs(nums[i]); 
+                return abs(v[i]); 
         }
         return 0;
     }
 };
 
 int main(){
-    
+
 }
